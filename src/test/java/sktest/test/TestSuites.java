@@ -1,9 +1,0 @@
-package sktest.test;
-
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
-
-@RunWith(Suite.class)
-@Suite.SuiteClasses({SKUnitTest.class})
-public class TestSuites {
-}

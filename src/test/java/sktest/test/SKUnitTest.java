@@ -10,11 +10,11 @@ import java.io.File;
 public class SKUnitTest extends SKUnit {
   @Test
   public void testIFiles() {
-    Assert.assertEquals(new File("src/test/java/sktest/test/testfiles/SKUnitTest_testIFiles_null_i.json"), skTestIFiles(FTN.JSON));
+    Assert.assertEquals(new File("src/test/java/sktest/test/tstfiles/SKUnitTest_testIFiles_null_i.json"), tstIFiles(FTN.JSON));
   }
 
   @Test
   public void testOFiles() {
-    skPrint(skTestOFiles(FTN.JSON));
+    tstPrint(tstOFiles(FTN.JSON));
   }
 }

@@ -21,7 +21,7 @@ public class SKUnit {
   public TestName testName = new TestName();//Can't private
   @Getter
   @Setter
-  private Stopwatch stopwatch = Stopwatch.createStarted();
+  private Stopwatch stopwatch;
   @Getter
   @Setter
   private Class tstClazz = this.getClass();
@@ -58,20 +58,12 @@ public class SKUnit {
 
   //CFG BEGIN:watch
   @Before
-  public void setUp() {
-    tstSetUp();
-  }
-
-  public void tstSetUp() {
+  public void tstBefore() {
     setStopwatch(Stopwatch.createStarted());
   }
 
   @After
-  public void tearDown() {
-    tstTearDown();
-  }
-
-  public void tstTearDown() {
+  public void tstAfter() {
     log.info(testName.getMethodName() + String0.EQUAL + this.getStopwatch().stop());
   }
   //CFG END:watch
